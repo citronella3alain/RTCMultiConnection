@@ -88,15 +88,15 @@ a {
 }
 
 a, h2 {
-    color: #EC008C;
+    color: #4f67de;
 }
 
 a:hover {
-    color: #671345;
+    color: #3d59e7;
 }
 
 .highlighted {
-    color: #EC008C;
+    color: #142bc6;
 }
 
 .make-center {
@@ -104,10 +104,10 @@ a:hover {
 }
 
 button {
-  -moz-box-shadow:inset 0px 39px 0px -24px #e67a73;
-  -webkit-box-shadow:inset 0px 39px 0px -24px #e67a73;
-  box-shadow:inset 0px 39px 0px -24px #e67a73;
-  background-color:#e4685d;
+  -moz-box-shadow:inset 0px 39px 0px -24px #0388ee;
+  -webkit-box-shadow:inset 0px 39px 0px -24px #1643e7;
+  box-shadow:inset 0px 39px 0px -24px #606fbd;
+  background-color: #6781d7;
   -moz-border-radius:4px;
   -webkit-border-radius:4px;
   border-radius:4px;
@@ -117,10 +117,10 @@ button {
   color:#ffffff;
   padding:6px 15px;
   text-decoration:none;
-  text-shadow:0px 1px 0px #b23e35;
+  text-shadow:0px 1px 0px #3558b2;
 }
 button:hover {
-  background-color:#eb675e;
+  background-color: #5e8deb;
 }
 button:active {
   position:relative;
@@ -150,6 +150,15 @@ button[disabled], input[disabled] {
 .menu-explorer img {
     vertical-align: middle;
     width: 25px;
+}
+
+#videos-container {
+    width: 67%;
+    margin: 20px 0;
+}
+#tools-container{
+    float:right;
+    width: 34%;
 }
 
 @media all and (max-width: 900px) {
