@@ -31,8 +31,7 @@
 
         <button class="accordion">Music Tools</button>
         <div class="panel">
-          
-
+          <div>Use arrow keys to toggle tempo</div>
           <div id="bpm"><span id="tempo">120</span> BPM</div>
           <!--<div id="playing">PLAYING</div>
           <div id="stopped">STOPPED</div>-->
@@ -491,9 +490,29 @@ if(navigator.connection &&
         console.log("this button was clicked")
       });
 
+
+
+      $(document).on('keydown', function(e) {
+        var tempo = parseInt($tempo.text());
+        switch (e.which) {
+          case 38: // up
+            if (tempo < 240) {
+              $tempo.text(tempo + 1);
+            }
+            break;
+          case 40: // down
+            if (tempo > 40) {
+              $tempo.text(parseInt($tempo.text()) - 1);
+            }
+        }
+      });
+
+
       $("#metstart").on('click', function() {
         console.log("buttonpressed")
         var tempo = parseInt($tempo.text());
+
+
         /*switch (e.which) {
           case 38: // up
             if (tempo < 240) {
