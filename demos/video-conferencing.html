@@ -21,11 +21,28 @@
       <button id="join-room">Join Room</button>
       <button id="open-or-join-room">Auto Open Or Join Room</button>
     </div>
+    <section>
+      <div id="videos-container"></div>
+      <div id="tools-container">
+        <button class="accordion">General Tools</button>
+        <div class="panel">
+          <p>Icons here for tools</p>
+        </div>
 
-    <div id="videos-container"></div>
+        <button class="accordion">Music Tools</button>
+        <div class="panel">
+          <p>Icons here for tools</p>
+        </div>
 
-    <div id="room-urls" style="text-align: center;display: none;background: #F1EDED;margin: 15px -10px;border: 1px solid rgb(189, 189, 189);border-left: 0;border-right: 0;"></div>
+        <button class="accordion">Science Tools</button>
+        <div class="panel">
+          <p>Icons here for tools</p>
+        </div>
+      </div>
+    </section>
+
   </section>
+  <div id="room-urls"></div>
 
 <script src="/dist/RTCMultiConnection.min.js"></script>
 <script src="/node_modules/webrtc-adapter/out/adapter.js"></script>
@@ -37,7 +54,26 @@
 
 <script src="/node_modules/recordrtc/RecordRTC.js"></script>
 <script>
-// ......................................................
+  // accordion
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      /* Toggle between adding and removing the "active" class,
+      to highlight the button that controls the panel */
+      this.classList.toggle("active");
+
+      /* Toggle between hiding and showing the active panel */
+      var panel = this.nextElementSibling;
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      } else {
+        panel.style.display = "block";
+      }
+    });
+  }
+  // ......................................................
 // .......................UI Code........................
 // ......................................................
 document.getElementById('open-room').onclick = function() {

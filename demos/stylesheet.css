@@ -151,14 +151,42 @@ button[disabled], input[disabled] {
     vertical-align: middle;
     width: 25px;
 }
+.accordion{
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+.panel {
+    padding: 0 18px;
+    width:100%;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+}
 
 #videos-container {
-    width: 67%;
+    float:left;
+    width:70%;
     margin: 20px 0;
 }
 #tools-container{
     float:right;
-    width: 34%;
+    width: 30%;
+}
+#room-urls {
+    text-align: left;
+    display: none;
+    background: #F1EDED;
+    margin: 15px -10px;
+    border: 1px solid rgb(189, 189, 189);
+    border-left: 0;
+    border-right: 0;
 }
 
 @media all and (max-width: 900px) {
