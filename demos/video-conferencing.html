@@ -9,25 +9,29 @@
   <script src="/demos/menu.js"></script>
 </head>
 <body>
-  <section class="make-center">
-    <div>
-      <label><input type="checkbox" id="record-entire-conference"> Record Entire Conference In The Browser?</label>
-      <span id="recording-status" style="display: none;"></span>
-      <button id="btn-stop-recording" style="display: none;">Stop Recording</button>
-      <br><br>
+  <section>
+    <div class="make-center">
+      <div>
+        <label><input type="checkbox" id="record-entire-conference"> Record Entire Conference In The Browser?</label>
+        <span id="recording-status" style="display: none;"></span>
+        <button id="btn-stop-recording" style="display: none;">Stop Recording</button>
+        <br><br>
 
-      <input type="text" id="room-id" value="abcdef" autocorrect=off autocapitalize=off size=20>
-      <button id="open-room">Open Room</button>
-      <button id="join-room">Join Room</button>
-      <button id="open-or-join-room">Auto Open Or Join Room</button>
+        <input type="text" id="room-id" value="abcdef" autocorrect=off autocapitalize=off size=20>
+        <button id="open-room">Open Room</button>
+        <button id="join-room">Join Room</button>
+        <button id="open-or-join-room">Auto Open Or Join Room</button>
+      </div>
+      <div id="room-urls"></div>
     </div>
-    <section>
-      <div id="videos-container"></div>
-      <div id="tools-container">
-        <button class="accordion">General Tools</button>
-        <div class="panel">
-          <p>Icons here for tools</p>
-        </div>
+    <section >
+      <div id="videos_tools">
+        <div id="videos-container"></div>
+        <div id="tools-container">
+          <button class="accordion">General Tools</button>
+          <div class="panel">
+            <p>Icons here for tools</p>
+          </div>
 
         <button class="accordion">Music Tools</button>
         <div class="panel">
@@ -39,17 +43,18 @@
           <!--<div id="keys">space: start/stop<br/>
             up/down: tempo</div>-->
 
-        </div>
+          </div>
 
-        <button class="accordion">Science Tools</button>
-        <div class="panel">
-          <p>Icons here for tools</p>
+          <button class="accordion">Science Tools</button>
+          <div class="panel">
+            <p>Icons here for tools</p>
+          </div>
         </div>
       </div>
-    </section>
 
+    </section>
   </section>
-  <div id="room-urls"></div>
+
 
 <script src="/dist/RTCMultiConnection.min.js"></script>
 <script src="/node_modules/webrtc-adapter/out/adapter.js"></script>
